@@ -13,28 +13,40 @@
 </head>
 <body>
 
-<div class="container">
-  <h2>Carousel Example</h2>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 left-col">
+        <div class="btn-group-vertical btn-block">
+        <button type="button" class="btn btn-primary">Online Payments</button>
+        <button type="button" class="btn btn-primary">Helpful Links</button>
+        <button type="button" class="btn btn-primary">Meetings</button>
+        </div>
+    </div>
+  <div class="col-md-6 right-col" >
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:50%;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-          <img src="{% static 'polls/images/example.jpg' %}" alt="Los Angeles" style="width:50%;">
+          <img src="{% static 'polls/images/a.jpg' %}" alt="Los Angeles" class="img-rounded" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="{% static 'polls/images/example.jpg' %}" alt="Chicago" style="width:50%;">
+        <img src="{% static 'polls/images/b.jpg' %}" alt="Chicago" class="img-circle" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="{% static 'polls/images/example.jpg' %}" alt="New york" style="width:50%;">
+        <img src="{% static 'polls/images/c.jpeg' %}" alt="New york" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="{% static 'polls/images/tenor.gif' %}" alt="Istanbul" style="width:100%;">
       </div>
     </div>
 
@@ -47,9 +59,14 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
-</div>
 
+</div>
+  </div>
+  </div>
+  </div>
+<div6>
+    <p2> <b>Ürünlerimiz şunlardır	</b> Bla bla bla blaa</p2>
+</div6>
 </body>
 </html>
 

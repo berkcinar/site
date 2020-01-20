@@ -10,16 +10,24 @@ from django.views import generic
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
-    return render(request, 'polls/index.html', context)
+    return render(request, 'polls/index1.html', context)
 
 def berkinkalbi(request):
-    return HttpResponse("         EEEEEEEZGİİİİİİİİİİ          ")
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    context = {'latest_question_list': latest_question_list}
+    return render(request, 'polls/index1.html', context)
 
-def ezgininkalbi(request):
-    return HttpResponse("       BERK ÖFKE NEFRET VE BERKE KIZMAK")
+def anasayfa(request):
+    return render(request, 'polls/anasayfa.html')
 
-def gercekezgininkalbi(request):
-    return HttpResponse(" BERKOSUNU ÖPERKEN DUDAĞINI KANATMAK ")
+def urunlerimiz(request):
+    return render(request, 'polls/urun.html')
+
+def iletisim(request):
+    return render(request, 'polls/iletisim.html')
+
+def test(request):
+    return render(request, 'polls/deneme.html')
 
 def detail(request, question_id):
 
@@ -55,7 +63,7 @@ def results(request, question_id):
     return render(request, 'polls/results.html', {'question': question})
 
 class IndexView(generic.ListView):
-    template_name = 'polls/index.html'
+    template_name = 'polls/anasayfa.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):

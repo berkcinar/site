@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+</style>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  {% load static %}
+  <a class="navbar-brand" href="anasayfa">
+    <img src="{% static 'polls/images/logo.jpg' %}" alt="logo" style="width:100px;" >Can Taşlama
+  </a>
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+    <li class="nav-item">
+      <a class="nav-link" href="anasayfa">Ana Sayfa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="urunlerimiz">Ürünlerimiz</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="iletisim">İletişim</a>
+    </li>
+    </ul>
+  <ul class="navbar-nav my-2 my-lg-0">
+    <li class="nav-item">
+      <a class="fa fa-facebook" href="https://www.facebook.com/turan.ozdemir.520"></a>
+    </li>
+        <li class="nav-item">
+      <a class="fa fa-twitter" href="https://twitter.com/EnergyPoolTUR"></a>
+    </li>
+    <li class="nav-item">
+      <a class="fa fa-google" href="https://www.google.com/search?sxsrf=ACYBGNTDf5Xat1G5gTFoC3CwK8byJB42Yw%3A1569706963908&ei=09OPXZ_nNvGprgS2zL2AAw&q=turan+%C3%B6zdemir&oq=turan+%C3%B6zdemir&gs_l=psy-ab.3..35i39j0i67l2j0l7.7631.7631..7895...0.0..0.121.121.0j1......0....1..gws-wiz.VZ0O7qYqjTw&ved=0ahUKEwjfnPCPvvTkAhXxlIsKHTZmDzAQ4dUDCAs&uact=5"></a>
+    </li>
+    <li class="nav-item">
+      <a class="fa fa-youtube" href="https://www.youtube.com/"></a>
+    </li>
+    <li class="nav-item">
+      <a class="fa fa-instagram" href="https://www.instagram.com/?hl=tr"></a>
+    </li>
+  </ul>
+</nav>
+{% block content %}{% endblock content %}
+</body>
+</html>
